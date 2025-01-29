@@ -1,56 +1,56 @@
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #ffebee;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-  }
-  
-  .container {
-    text-align: center;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
-  
-  h1 {
-    color: #e91e63;
-    font-size: 2.5rem;
-  }
-  
-  p {
-    color: #333;
-    font-size: 1.2rem;
-  }
-  
-  .buttons {
-    margin-top: 20px;
-  }
-  
-  button {
-    padding: 10px 20px;
-    font-size: 1rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin: 0 10px;
-  }
-  
-  #yesButton {
-    background-color: #e91e63;
-    color: white;
-  }
-  
-  #noButton {
-    background-color: #ccc;
-    color: #333;
-  }
-  
-  #response {
-    margin-top: 20px;
-    font-size: 1.5rem;
-    color: #e91e63;
-  }
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #ffcccb, #ff69b4); /* Light pink to hot pink gradient */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white background */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  color: #e91e63; /* Romantic pink for the heading */
+  font-size: 2.5rem;
+}
+
+p {
+  color: #333;
+  font-size: 1.2rem;
+}
+
+.buttons {
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+#yesButton {
+  background-color: #e91e63; /* Romantic pink for the "Yes" button */
+  color: white;
+}
+
+#noButton {
+  background-color: #ccc;
+  color: #333;
+}
+
+#response {
+  margin-top: 20px;
+  font-size: 1.5rem;
+  color: #e91e63; /* Romantic pink for the response text */
+}
