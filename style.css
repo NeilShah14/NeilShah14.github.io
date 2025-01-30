@@ -80,11 +80,12 @@ button {
 /* Video styling */
 .floating-video {
   position: absolute;
-  width: 12%; /* Smaller video size */
+  width: 18%; /* Adjusted to be smaller */
   height: auto;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  opacity: 0.9;
+  opacity: 0.8;
+  z-index: 1;
 }
 
 .floating-video:hover {
@@ -95,6 +96,6 @@ button {
 /* Adjust video size on smaller screens */
 @media (max-width: 768px) {
   .floating-video {
-      width: 18%; /* Smaller video size on mobile */
+      width: 25%; /* Adjusted size for mobile */
   }
 }
