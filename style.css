@@ -59,16 +59,25 @@ button {
   color: #e91e63;
 }
 
-/* Styling for randomly placed images */
+/* Adjusted image styling */
 .floating-img {
   position: absolute;
-  width: 120px;
+  width: 120px; /* Adjusted size */
   height: auto;
-  border-radius: 10px;
+  border-radius: 15px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  opacity: 0.85;
 }
 
 .floating-img:hover {
   transform: scale(1.1);
+  opacity: 1;
+}
+
+/* Ensure images are well-positioned */
+@media (max-width: 768px) {
+  .floating-img {
+      width: 90px; /* Smaller images on mobile */
+  }
 }
