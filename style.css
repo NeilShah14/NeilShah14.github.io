@@ -81,12 +81,14 @@ button {
 .floating-video {
   position: absolute;
   width: 20%; /* Adjusted width for better size control */
+  max-width: 250px; /* Maximum size for the video */
   height: auto;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   opacity: 0.8;
   z-index: 1;
   object-fit: cover; /* Ensure videos maintain aspect ratio */
+  pointer-events: none; /* Prevent video from blocking clicks */
 }
 
 .floating-video:hover {
