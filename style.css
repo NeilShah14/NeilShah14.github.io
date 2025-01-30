@@ -56,6 +56,34 @@ button {
   color: #e91e63;
 }
 
+/* Video Container */
+.video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  pointer-events: none; /* Ensure videos don't block clicks */
+}
+
+.floating-video {
+  width: 45%; /* Adjust video size */
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  opacity: 0.8;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.floating-video:hover {
+  transform: scale(1.05);
+  opacity: 1;
+}
+
 /* Sad Face Animation */
 @keyframes fadeOut {
   0% {
