@@ -16,18 +16,13 @@ body {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  max-width: 90%;
+  max-width: 70%; /* Adjusted to accommodate only the question */
   z-index: 2;
 }
 
 h1 {
   color: #e91e63;
   font-size: 2.5rem;
-}
-
-p {
-  color: #333;
-  font-size: 1.2rem;
 }
 
 .buttons {
@@ -80,4 +75,19 @@ button {
   .floating-img {
       width: 90px; /* Smaller images on mobile */
   }
+}
+
+/* Video styling */
+.floating-video {
+  position: absolute;
+  width: 20%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  opacity: 0.9;
+}
+
+.floating-video:hover {
+  transform: scale(1.05);
+  opacity: 1;
 }
