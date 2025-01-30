@@ -3,7 +3,6 @@ body {
   font-family: 'Arial', sans-serif;
   background: linear-gradient(135deg, #ffcccb, #ff69b4);
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -21,7 +20,6 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   max-width: 70%;
   z-index: 2;
-  margin-bottom: 20px; /* Space between content and media */
 }
 
 h1 {
@@ -56,74 +54,6 @@ button {
   margin-top: 20px;
   font-size: 1.5rem;
   color: #e91e63;
-}
-
-/* Media Section */
-.media-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px; /* Space between videos and images */
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-  z-index: 1;
-}
-
-/* Videos Section */
-.videos {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 columns for videos */
-  gap: 10px; /* Space between videos */
-  width: 100%;
-}
-
-.floating-video {
-  width: 100%; /* Full width of the grid cell */
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  opacity: 0.8;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-.floating-video:hover {
-  transform: scale(1.05);
-  opacity: 1;
-}
-
-/* Images Section */
-.images {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 columns for images */
-  gap: 10px; /* Space between images */
-  width: 100%;
-}
-
-.floating-img {
-  width: 100%; /* Full width of the grid cell */
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  opacity: 0.85;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-.floating-img:hover {
-  transform: scale(1.1);
-  opacity: 1;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .videos {
-    grid-template-columns: 1fr; /* 1 column for videos on mobile */
-  }
-
-  .images {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns for images on mobile */
-  }
 }
 
 /* Sad Face Animation */
