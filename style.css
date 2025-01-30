@@ -80,7 +80,7 @@ button {
 /* Video styling */
 .floating-video {
   position: absolute;
-  width: 22%; /* Adjusted to be smaller */
+  width: 22%; /* Increased size for desktop */
   height: auto;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -96,6 +96,6 @@ button {
 /* Adjust video size on smaller screens */
 @media (max-width: 768px) {
   .floating-video {
-      width: 25%; /* Adjusted size for mobile */
+      width: 30%; /* Increased size for mobile */
   }
 }
