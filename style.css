@@ -1,7 +1,9 @@
+/* General Styles */
 body {
   font-family: 'Arial', sans-serif;
   background: linear-gradient(135deg, #ffcccb, #ff69b4);
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -10,14 +12,16 @@ body {
   position: relative;
 }
 
+/* Main Content */
 .container {
   text-align: center;
   background-color: rgba(255, 255, 255, 0.9);
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  max-width: 70%; /* Adjusted to accommodate only the question */
+  max-width: 70%;
   z-index: 2;
+  margin-bottom: 20px; /* Space between content and media */
 }
 
 h1 {
@@ -54,38 +58,34 @@ button {
   color: #e91e63;
 }
 
-/* Adjusted image styling */
-.floating-img {
-  position: absolute;
-  width: 120px; /* Adjusted size */
-  height: auto;
-  border-radius: 15px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-  opacity: 0.85;
+/* Media Section */
+.media-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px; /* Space between videos and images */
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  z-index: 1;
 }
 
-.floating-img:hover {
-  transform: scale(1.1);
-  opacity: 1;
+/* Videos Section */
+.videos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns for videos */
+  gap: 10px; /* Space between videos */
+  width: 100%;
 }
 
-/* Ensure images are well-positioned */
-@media (max-width: 768px) {
-  .floating-img {
-      width: 90px; /* Smaller images on mobile */
-  }
-}
-
-/* Video styling */
 .floating-video {
-  position: absolute;
-  width: 18%; /* Adjusted to be smaller */
+  width: 100%; /* Full width of the grid cell */
   height: auto;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   opacity: 0.8;
-  z-index: 1;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .floating-video:hover {
@@ -93,9 +93,35 @@ button {
   opacity: 1;
 }
 
-/* Adjust video size on smaller screens */
+/* Images Section */
+.images {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns for images */
+  gap: 10px; /* Space between images */
+  width: 100%;
+}
+
+.floating-img {
+  width: 100%; /* Full width of the grid cell */
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  opacity: 0.85;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.floating-img:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
-  .floating-video {
-      width: 25%; /* Adjusted size for mobile */
+  .videos {
+    grid-template-columns: 1fr; /* 1 column for videos on mobile */
+  }
+
+  .images {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for images on mobile */
   }
 }
