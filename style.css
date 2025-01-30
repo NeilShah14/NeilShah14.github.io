@@ -80,7 +80,7 @@ button {
 /* Video styling */
 .floating-video {
   position: absolute;
-  width: 20%; /* Smaller video size */
+  width: 12%; /* Smaller video size */
   height: auto;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
