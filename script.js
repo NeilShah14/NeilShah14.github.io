@@ -2,20 +2,6 @@ const yesButton = document.getElementById('yesButton');
 const noButton = document.getElementById('noButton');
 const response = document.getElementById('response');
 
-// Function to scatter media items
-function scatterMedia() {
-  const mediaItems = document.querySelectorAll('.floating-media');
-  mediaItems.forEach((item) => {
-    const randomTop = Math.random() * 80 + 5; // Random top position (5% to 85%)
-    const randomLeft = Math.random() * 80 + 5; // Random left position (5% to 85%)
-    item.style.top = `${randomTop}%`;
-    item.style.left = `${randomLeft}%`;
-  });
-}
-
-// Call scatterMedia on page load
-window.addEventListener('load', scatterMedia);
-
 // Confetti function
 function triggerConfetti() {
   confetti({
