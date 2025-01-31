@@ -1,47 +1,101 @@
-const yesButton = document.getElementById('yesButton');
-const noButton = document.getElementById('noButton');
-const response = document.getElementById('response');
-
-// Confetti function
-function triggerConfetti() {
-  confetti({
-    particleCount: 100,
-    spread: 70,
-    origin: { y: 0.6 },
-  });
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #ffcccb, #ff69b4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  position: relative;
 }
 
-// Sad face animation function
-function showSadFace() {
-  const sadFace = document.createElement('div');
-  sadFace.innerHTML = '😢';
-  sadFace.style.position = 'fixed';
-  sadFace.style.top = '50%';
-  sadFace.style.left = '50%';
-  sadFace.style.transform = 'translate(-50%, -50%)';
-  sadFace.style.fontSize = '100px';
-  sadFace.style.zIndex = '1000';
-  sadFace.style.animation = 'fadeOut 2s forwards';
-  document.body.appendChild(sadFace);
-
-  setTimeout(() => {
-    sadFace.remove();
-  }, 2000);
+/* Main Content */
+.container {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  z-index: 2;
+  position: relative;
 }
 
-// Yes button click event
-yesButton.addEventListener('click', () => {
-  response.textContent = "Yay! You've made me the happiest person! 💖";
-  triggerConfetti();
-});
+h1 {
+  color: #e91e63;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
 
-// No button click event
-noButton.addEventListener('click', () => {
-  response.textContent = "Oh no! Please reconsider! 😢";
-  showSadFace();
+.buttons {
+  margin-top: 20px;
+}
 
-  // Move the "No" button randomly
-  noButton.style.position = 'absolute';
-  noButton.style.left = `${Math.random() * 80 + 10}%`;
-  noButton.style.top = `${Math.random() * 80 + 10}%`;
-});
+button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+#yesButton {
+  background-color: #e91e63;
+  color: white;
+}
+
+#noButton {
+  background-color: #ccc;
+  color: #333;
+}
+
+/* Response Text */
+#response {
+  margin-top: 20px;
+  font-size: 1.5rem;
+  color: #e91e63;
+}
+
+/* Scattered Media Items */
+.floating-media {
+  position: absolute;
+  opacity: 0.8;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.floating-media:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+/* Video Styles */
+.floating-video {
+  width: 150px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Image Styles */
+.floating-img {
+  width: 130px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Sad Face Animation */
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+}
