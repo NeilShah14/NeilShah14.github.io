@@ -62,11 +62,15 @@ button {
 
 /* Media Container */
 .media-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
 }
 
 /* Video and Image Containers */
@@ -74,7 +78,7 @@ button {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  width: 80%;
+  width: 100%;
   gap: 10px;
 }
 
