@@ -60,41 +60,24 @@ button {
   color: #e91e63;
 }
 
-/* Media Container */
-.media-container {
+/* Scattered Media Items */
+.floating-media {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1;
-}
-
-/* Video and Image Containers */
-.video-container, .image-container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  width: 100%;
-  gap: 10px;
-}
-
-/* Video Styles */
-.floating-video {
-  width: 22%;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   opacity: 0.8;
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-.floating-video:hover {
-  transform: scale(1.05);
+.floating-media:hover {
+  transform: scale(1.1);
   opacity: 1;
+}
+
+/* Video Styles */
+.floating-video {
+  width: 150px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 /* Image Styles */
@@ -103,13 +86,6 @@ button {
   height: auto;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  opacity: 0.85;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-.floating-img:hover {
-  transform: scale(1.1);
-  opacity: 1;
 }
 
 /* Sad Face Animation */
