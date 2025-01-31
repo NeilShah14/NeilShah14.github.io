@@ -60,32 +60,30 @@ button {
   color: #e91e63;
 }
 
-/* Scattered Media Items */
-.floating-media {
+/* Floating Media Styles */
+.floating-video, .floating-img {
   position: absolute;
   opacity: 0.8;
   transition: transform 0.3s ease, opacity 0.3s ease;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-.floating-media:hover {
+.floating-video:hover, .floating-img:hover {
   transform: scale(1.1);
   opacity: 1;
 }
 
 /* Video Styles */
 .floating-video {
-  width: 150px;
+  width: 150px; /* Fixed width for videos */
   height: auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 /* Image Styles */
 .floating-img {
-  width: 130px;
+  width: 130px; /* Fixed width for images */
   height: auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 /* Sad Face Animation */
